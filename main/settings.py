@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ex2ae8@c_1z&^l)+yj@3f0e5ysr2bq-&1p@1f1epk4+fde(vft
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dda.herokuapp.com']
 
 
 # Application definition
@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'regent',
-        'USER': 'postgres',
-        'PASSWORD': 123456,
-        'HOST': 'localhost',
-        'PORT': 5432,
+        'NAME': 'dfuqov2v4d1di7',
+        'USER': 'mqgkcbdgowfwcn',
+        'PASSWORD': 'b2d8fc5c17602e302f1c005aa29d5bd816deb1cf7fbf3111548fbb69ef78ec1b',
+        'HOST': 'ec2-50-19-255-190.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -121,11 +121,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
-
+django_heroku.settings(locals())
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
